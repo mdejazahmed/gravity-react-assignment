@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { findTwoSum } from "../utils";
+import { findTwoSum } from "../utils/findTwoSum";
 export const TwoSumVisualizer=()=> {
   const [input, setInput] = useState("2,7,11,15");
   const [target, setTarget] = useState("9");
