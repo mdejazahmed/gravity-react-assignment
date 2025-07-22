@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { findTwoSum } from "../utils";
 export const TwoSumVisualizer=()=> {
   const [input, setInput] = useState("2,7,11,15");
   const [target, setTarget] = useState("9");
@@ -10,17 +10,12 @@ export const TwoSumVisualizer=()=> {
     try {
       const nums = input.split(",").map((v) => parseInt(v.trim()));
       const tgt = parseInt(target.trim());
-      const map = new Map();
-
-      for (let i = 0; i < nums.length; i++) {
-        const complement = tgt - nums[i];
-        if (map.has(complement)) {
-          setIndices([map.get(complement), i]);
-          setError("");
-          return;
-        }
-        map.set(nums[i], i);
-      }
+     const indices = findTwoSum(nums, tgt);
+     if (indices.length === 2) {
+      setIndices(indices);
+      setError("");
+      return;
+    }
 
       setError("❌ No valid pair found!");
       setIndices([]);
