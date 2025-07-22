@@ -5,7 +5,7 @@ This project demonstrates my skills across **JavaScript DSA**, **MongoDB Aggrega
 ---
 
 ## 📁 Project Structure
-
+```
 /src
 ├── components
 │ ├── assets
@@ -26,6 +26,8 @@ This project demonstrates my skills across **JavaScript DSA**, **MongoDB Aggrega
 ├── vite.config.js # Vite configuration
 ├── package.json # Project dependencies
 ├── README.md # Project documentation
+
+```
 ---
 
 ## 🚀 Features
